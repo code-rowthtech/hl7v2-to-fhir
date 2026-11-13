@@ -1,0 +1,78 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:99cf261a-63de-5fd8-9924-77efa753599e",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "99cf261a-63de-5fd8-9924-77efa753599e",
+        "identifier": [
+          {
+            "system": "https://example.invalid/mrn",
+            "value": "SYNTHETIC-PATIENT-001"
+          }
+        ],
+        "name": [
+          {
+            "family": "Synthetic",
+            "given": [
+              "Patient001"
+            ]
+          }
+        ],
+        "birthDate": "2000-01-01",
+        "gender": "unknown"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7808c687-f398-56ad-858c-c8bd2a38fea6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "7808c687-f398-56ad-858c-c8bd2a38fea6",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:99cf261a-63de-5fd8-9924-77efa753599e"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "8867-4",
+              "display": "Heart rate",
+              "system": "http://loinc.org"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 72.0,
+          "unit": "/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4fe621bf-7518-5715-879e-eaaa14a39de3",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "4fe621bf-7518-5715-879e-eaaa14a39de3",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "8867-4"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:99cf261a-63de-5fd8-9924-77efa753599e"
+        },
+        "result": [
+          {
+            "reference": "urn:uuid:7808c687-f398-56ad-858c-c8bd2a38fea6"
+          }
+        ]
+      }
+    }
+  ]
+}

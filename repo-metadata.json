@@ -1,0 +1,16 @@
+{
+  "name": "hl7v2-to-fhir",
+  "description": "Convert a documented HL7 v2.5.1 ADT/ORU subset into linked FHIR R4 resources.",
+  "topics": [
+    "healthcare",
+    "hl7",
+    "fhir",
+    "interoperability",
+    "python"
+  ],
+  "priority": "P0",
+  "market": "US",
+  "sampleStatus": "ready-for-documented-offline-demo",
+  "productionReady": false,
+  "validationScope": "Local synthetic fixtures, documented sample rules, automated tests and type checks where applicable"
+}
